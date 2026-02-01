@@ -1,4 +1,4 @@
-  /* --- 1. RESET & BASE --- */
+/* --- 1. GLOBAL STYLES --- */
  * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Open Sans', sans-serif; background-color: #ffffff; color: #000000; overflow-x: hidden; }
         .container { max-width: 1440px; margin: 0 auto; padding: 0 24px; width: 100%; }
@@ -24,12 +24,12 @@
         @media (max-width: 768px) {
             .header-secondary { display: none; }
             .navbar { 
-                position: fixed; /* Set to fixed to stay on top while scrolling */
+                position: fixed; 
                 transform: translateY(0); 
                 top: 0; 
                 box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
             }
-            .main-content { padding-top: 70px; } /* Prevent hero from hiding under sticky nav */
+            .main-content { padding-top: 70px; }
         }
 
         .logo-main { height: 40px; }
@@ -110,7 +110,7 @@
     width: 100%;
     padding: 60px 0;
     background: #ffffff;
-    overflow: hidden; /* Clips the logos as they scroll out of view */
+    overflow: hidden; 
 }
 
 .schools-title {
@@ -135,8 +135,8 @@
 
 .logo-row {
     display: flex;
-    gap: 40px; /* Space between logo boxes */
-    width: max-content; /* Critical for horizontal alignment */
+    gap: 40px;
+    width: max-content; 
 }
 
 /* Individual Logo Boxes */
@@ -160,7 +160,6 @@
 }
 
 /* Infinite Scrolling Keyframes */
-/* calc logic: -(Width of one item + gap) * number of items in one set */
 @keyframes scrollLeft {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-260px * 6)); }
@@ -221,7 +220,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    scroll-behavior: smooth; /* Smooth scroll when clicking dots */
+    scroll-behavior: smooth;
 }
 
 .school-card {
@@ -268,7 +267,7 @@
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
-        gap: 15px; /* JS uses this value for math */
+        gap: 15px;
         padding: 0 20px 20px;
         scrollbar-width: none;
     }
@@ -284,7 +283,6 @@
     .pagination-dots { display: flex; }
 }     
 /* --- APPOINTMENT SECTION STYLES --- */
-/* --- APPOINTMENT SECTION --- */
 .appointment-section {
     width: 100%;
     background-color: #fff;
@@ -299,12 +297,12 @@
 
 /* Left Content Area - Precise Alignment */
 .appointment-content {
-    flex: 1.1; /* Slightly wider for the text */
+    flex: 1.1; 
     background-color: #d9c7f6;
     display: flex;
-    align-items: center; /* Vertical Center */
+    align-items: center;
     justify-content: flex-start;
-    padding: 40px 0 40px 8%; /* Specific left-aligned padding */
+    padding: 40px 0 40px 8%; 
     z-index: 2;
 }
 
@@ -316,7 +314,7 @@
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     font-size: 24px;
-    color: #9b72cf; /* Softer purple per image */
+    color: #9b72cf; 
     margin-bottom: 12px;
     letter-spacing: -0.5px;
 }
@@ -325,8 +323,8 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
     font-size: clamp(34px, 4.5vw, 54px);
-    color: #1c0f4d; /* Deep navy/purple */
-    line-height: 1.15; /* Tight line height per image */
+    color: #1c0f4d; 
+    line-height: 1.15; 
     margin-bottom: 20px;
     letter-spacing: -1px;
 }
@@ -335,7 +333,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 26px;
     color: #9b72cf;
-    margin-bottom: 45px; /* Large gap before button */
+    margin-bottom: 45px;
     letter-spacing: -0.5px;
 }
 
@@ -365,7 +363,7 @@
     height: 54px;
     padding: 0 35px;
     background: #eaddff; 
-    border: 1px solid #1c0f4d; /* Thinner stroke */
+    border: 1px solid #1c0f4d; 
     border-left: none; 
     border-radius: 0 4px 4px 0;
     font-family: 'Open Sans', sans-serif;
@@ -386,8 +384,8 @@
 .image-fade-overlay {
     position: absolute;
     top: 0;
-    left: -2px; /* Slight overlap to prevent seam */
-    width: 45%; /* Deep fade per image */
+    left: -2px;
+    width: 45%;
     height: 100%;
     background: linear-gradient(90deg, #d9c7f6 0%, #d9c7f6 15%, rgba(234, 221, 255, 0) 100%);
     z-index: 1;
@@ -455,7 +453,7 @@
     overflow-x: auto;
     scroll-behavior: smooth;
     scrollbar-width: none;
-    padding: 0 40px; /* Padding to center cards on mobile */
+    padding: 0 40px;
     scroll-snap-type: x mandatory;
 }
 
@@ -463,7 +461,7 @@
 
 /* Desktop Card Dimensions */
 .highlight-card {
-    min-width: 380px; /* Decreased width for better fit */
+    min-width: 380px; 
     max-width: 417px;
     height: 380px;
     background: #eaddff;
@@ -511,7 +509,6 @@
 
 .nav-next { background: #fff; color: #1a1045; }
 
-/* MOBILE ADJUSTMENTS */
 /* MOBILE ADJUSTMENTS - Full Single Card Display */
 @media (max-width: 768px) {
     .exhibition-highlights {
@@ -519,23 +516,23 @@
     }
 
     .highlights-bg-shape {
-        clip-path: ellipse(220% 100% at 50% 0%); /* Flatter curve for mobile screens */
+        clip-path: ellipse(220% 100% at 50% 0%);
         padding: 60px 0 80px;
     }
 
     .highlights-title {
-        font-size: 22px; /* Adjusted for mobile legibility */
+        font-size: 22px; 
         margin-bottom: 40px;
         line-height: 1.3;
     }
 
     .highlights-slider-container {
-        padding: 0 20px; /* Side gutters for the viewport */
+        padding: 0 20px;
     }
 
     .highlights-slider {
         padding: 0;
-        gap: 0; /* Remove gap to ensure only one card is in focus */
+        gap: 0; 
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
@@ -545,7 +542,7 @@
         /* Set width to fill the container exactly */
         min-width: 100%; 
         max-width: 100%;
-        height: auto; /* Allow height to adjust based on content */
+        height: auto; 
         min-height: 320px;
         padding: 35px 25px;
         margin-right: 0;
@@ -553,7 +550,7 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        text-align: left; /* Align text as per mobile mockup */
+        text-align: left; 
     }
 
     .highlight-icon {
@@ -563,7 +560,7 @@
     }
 
     .highlight-card h3 {
-        font-size: 18px; /* Compact heading for mobile */
+        font-size: 18px; 
         margin-bottom: 12px;
     }
 
@@ -583,7 +580,6 @@
         height: 45px;
     }
 }
-/* --- FOOTER SECTION STYLES --- */
 /* --- FOOTER SECTION STYLES --- */
 .main-footer {
     width: 100%;
@@ -613,16 +609,16 @@
 
 /* --- ICON STYLING: SOLID WHITE WITH GRADIENT BORDER --- */
 .info-icon, .social-icons a {
-    width: 48px; /* Increased size for desktop */
+    width: 48px;
     height: 48px;
-    background: #fff; /* Solid white background */
+    background: #fff;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     position: relative;
-    padding: 2px; /* Space for gradient border effect */
+    padding: 2px;
     z-index: 1;
 }
 
@@ -640,7 +636,6 @@
     width: 22px;
     height: 22px;
     object-fit: contain;
-    /* Colors icons to match theme */
     filter: brightness(0) saturate(100%) invert(13%) sepia(87%) saturate(2253%) hue-rotate(244deg) brightness(85%) contrast(110%);
 }
 
@@ -666,7 +661,7 @@
 /* --- SIDE-BY-SIDE ALIGNMENT FOR CONTACT & SOCIAL --- */
 .footer-contact-social {
     display: flex;
-    flex-direction: row; /* Aligns "Call us" and "Follow us" side-by-side */
+    flex-direction: row;
     justify-content: space-between;
     gap: 30px;
 }
@@ -702,14 +697,14 @@
         gap: 40px;
     }
     .footer-contact-social {
-        flex-direction: column; /* Stack back to line-by-line on smaller tablets */
+        flex-direction: column;
         gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .footer-grid {
-        grid-template-columns: 1fr; /* One-by-one stacking on mobile */
+        grid-template-columns: 1fr;
         gap: 35px;
     }
     .info-icon, .social-icons a {
